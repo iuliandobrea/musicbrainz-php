@@ -52,6 +52,9 @@ abstract class AbstractApi
      */
     public function get(string $path, array $parameters = [], array $requestHeaders = [])
     {
+        // HARDCODE start path
+        $path = '/ws/2/' . $path;
+
         // build query parameters and append to request path
         if (count($parameters) > 0) {
             $path .= '?' . http_build_query($parameters, '', '&', PHP_QUERY_RFC3986);
