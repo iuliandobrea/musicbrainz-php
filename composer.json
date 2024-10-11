@@ -1,5 +1,5 @@
 {
-    "name": "stephan-strate/php-music-brainz-api",
+    "name": "iuliandobrea/musicbrainz-php",
     "type": "library",
     "description": "PHP wrapper for MusicBrainz api. Supports object-oriented access using repositories and factories.",
     "keywords": [
@@ -24,7 +24,6 @@
         "php-http/client-common": "^2.3",
         "php-http/discovery": "^1.10",
         "php-http/client-implementation": "^1.0",
-
         "symfony/serializer": "^5.2",
         "symfony/property-access": "^5.2",
         "doctrine/annotations": "^1.11",
