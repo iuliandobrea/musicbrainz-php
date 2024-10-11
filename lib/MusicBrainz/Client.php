@@ -19,7 +19,7 @@ use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\AddHostPlugin;
 use Http\Discovery\Psr17FactoryDiscovery;
 use MusicBrainz\Api\AbstractApi;
-use MusicBrainz\Api\Core\Artist;
+use MusicBrainz\Api\Core;
 use MusicBrainz\HttpClient\Builder;
 
 /**
@@ -73,7 +73,13 @@ class Client
     {
         switch ($name) {
             case 'artist':
-                return new Artist($this);
+                return new Core\Artist($this);
+            case 'recording':
+                return new Core\Recording($this);
+            case 'release':
+                return new Core\Release($this);
+            case 'release_group':
+                return new Core\ReleaseGroup($this);
             default:
                 throw new \InvalidArgumentException(sprintf('Undefined api instance called: "%s"', $name));
         }
