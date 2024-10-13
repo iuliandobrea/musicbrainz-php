@@ -61,6 +61,7 @@ class Client
         $this->httpClientBuilder->addHeaders([
             'Accept' => 'application/json',
             'Application' => $name . '/' . $version . '(' . $contact . ')',
+            'User-Agent' => $name . '/' . $version . ' (' . $contact . ')'
         ]);
     }
 
